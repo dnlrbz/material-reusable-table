@@ -16,7 +16,7 @@
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element" [id]="rowActionIcon" (click)="emitRowAction(element)">
         <button mat-button>
-          <mat-icon>remove_shopping_cart</mat-icon>
+          <mat-icon>{{rowActionIcon}}</mat-icon>
         </button>
       </td>
     </ng-container>
