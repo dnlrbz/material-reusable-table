@@ -1,6 +1,8 @@
-# ReusableMaterial
+# Reusable Angular Material table
 
-Project with reusable angular material table
+Project for configurable and reusable angular material table
+![1_rIwXvPHmmvPbd2TagMvNRw](https://user-images.githubusercontent.com/34266035/131548037-ad2156b8-b062-4695-8670-8c8ec37cb127.gif)
+
 
 ## Development server
 
