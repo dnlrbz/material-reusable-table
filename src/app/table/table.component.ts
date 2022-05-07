@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {TableColumn} from "./TableColumn";
-import {MatSort, Sort} from "@angular/material/sort";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
+import {TableColumn} from './TableColumn';
+import {MatSort, Sort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'custom-table',
@@ -19,7 +19,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @Input() isPageable = false;
   @Input() isSortable = false;
   @Input() isFilterable = false;
-  @Input() tableColumns: TableColumn[];
+  @Input() tableColumns: TableColumn[] = [];
   @Input() rowActionIcon: string;
   @Input() paginationSizes: number[] = [5, 10, 15];
   @Input() defaultPageSize = this.paginationSizes[1];
@@ -38,7 +38,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     const columnNames = this.tableColumns.map((tableColumn: TableColumn) => tableColumn.name);
     if (this.rowActionIcon) {
-      this.displayedColumns = [this.rowActionIcon, ...columnNames]
+      this.displayedColumns = [this.rowActionIcon, ...columnNames];
     } else {
       this.displayedColumns = columnNames;
     }

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Order} from "./order";
-import {TableColumn} from "../table/TableColumn";
-import {CurrencyPipe, DecimalPipe, PercentPipe} from "@angular/common";
-import {Sort} from "@angular/material/sort";
+import {Order} from './order';
+import {TableColumn} from '../table/TableColumn';
+import {CurrencyPipe, DecimalPipe, PercentPipe} from '@angular/common';
+import {Sort} from '@angular/material/sort';
 
 @Component({
   selector: 'app-orders',
@@ -36,7 +36,7 @@ export class OrdersComponent implements OnInit {
   }
 
   removeOrder(order: Order) {
-    this.orders = this.orders.filter(item => item.id !== order.id)
+    this.orders = this.orders.filter(item => item.id !== order.id);
   }
 
   initializeColumns(): void {
